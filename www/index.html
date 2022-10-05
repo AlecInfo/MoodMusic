@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="format-detection" content="telephone=no"> -->
+        <!-- <meta name="msapplication-tap-highlight" content="no"> -->
+        <!-- <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover"> -->
+        <!-- <meta name="color-scheme" content="light dark"> -->
+        <link rel="stylesheet" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <header>
+            <h2>MoodMusic</h2>
+        </header>
+        <main>
+            <div>
+                <h2>Choose your mood</h2>
+                <div>
+                    <button id="moodSelector" onclick="moodSelector('HAPPY')">HAPPY</button>
+                    <button id="moodSelector" onclick="moodSelector('SAD')">SAD</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                </div>
+            </div>
+
+            <div id="separator"></div>
+            
+            <div>
+                <h2 id="moodTitle">Title Test</h2>
+                <div id="playlists" >
+
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <script>
+        function moodSelector(params) {
+            document.getElementById("moodTitle").innerHTML = "You're " + params;
+        }
+    </script>
+</html>
