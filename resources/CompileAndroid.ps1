@@ -1,6 +1,6 @@
 $containerName="Test_Config"
-$pathDocker="/tmp/myapp/"
-$pathLocal="C:\Users\Admin\Desktop\TestConfig\myapp\platforms\android\app\build\outputs\apk\debug\"
+$pathDocker="/tmp/MoodMusic/"
+$pathLocal="C:\Users\Alec.ptt\Documents\AttProgrammationSmartphone\MoodMusic\platforms\android\app\build\outputs\apk\debug"
 
 $Host.UI.RawUI.ForegroundColor="green"
 echo ">>>>>> Build Android Code ... `n"

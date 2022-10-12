@@ -19,3 +19,5 @@ platforms/*
 
 node_modules
 >>>>>>> 055e852fd6254265f362d7eb3731b840dc01b8b7
+
+/resources/CompileAndroid.ps1
