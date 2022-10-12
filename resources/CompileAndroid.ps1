@@ -1,4 +1,4 @@
-$containerName="TestConfig"
+$containerName="Test_Config"
 $pathDocker="/tmp/myapp/"
 $pathLocal="C:\Users\Admin\Desktop\TestConfig\myapp\platforms\android\app\build\outputs\apk\debug\"
 
