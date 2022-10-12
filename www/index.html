@@ -17,32 +17,21 @@
         <main>
             <div>
                 <h2>Choose your mood</h2>
-                <div>
-                    <button id="moodSelector" onclick="moodSelector('HAPPY')">HAPPY</button>
-                    <button id="moodSelector" onclick="moodSelector('SAD')">SAD</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
-                    <button id="moodSelector" onclick="moodSelector()">...</button>
+                <div id="moodContainer">
+                    <button id="btnMoodSelector" onclick="moodSelector('HAPPY')">HAPPY</button>
+                    <button id="btnMoodSelector" onclick="moodSelector('SAD')">SAD</button>
+                    <button id="btnMoodSelector" onclick="moodSelector('LAZY')">LAZY</button>
+                    <button id="btnMoodSelector" onclick="moodSelector()">...</button>
+                    <button id="btnMoodSelector" onclick="moodSelector()">...</button>
+                    <button id="btnMoodSelector" onclick="moodSelector()">...</button>
                 </div>
             </div>
 
             <div id="separator"></div>
             
             <div>
-                <h2 id="moodTitle">Title Test</h2>
-                <div id="playlists" >
+                <h2 id="moodTitle">You don't have an emotion</h2>
+                <div id="playlistContainer">
 
                 </div>
             </div>
@@ -51,7 +40,23 @@
 
     <script>
         function moodSelector(params) {
+            let playlistsStr = "";
+
+            let playlists = [
+                1479458365,
+                1276787711,
+                8788949122,
+                8873745702
+            ];
+
+
             document.getElementById("moodTitle").innerHTML = "You're " + params;
+
+            playlists.forEach(element =>{
+                playlistsStr += '<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/' + element + '?tracklist=false" width="270" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
+            });
+
+            document.getElementById("playlistContainer").innerHTML = playlistsStr;
         }
     </script>
 </html>
