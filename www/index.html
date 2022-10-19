@@ -12,7 +12,7 @@
     </head>
     <body>
         <header>
-            <h2>MoodMusic</h2>
+            <h1>MoodMusic</h1>
         </header>
         <main>
             <div>
@@ -30,7 +30,8 @@
             <div id="separator"></div>
             
             <div>
-                <h2 id="moodTitle">You don't have an emotion</h2>
+                <h2 id="moodTitle">You don't have an emotion !</h2>
+                <h3 id="typeList" onload='changeVisibility("typeList")'>Playlists</h3>
                 <div id="playlistContainer">
 
                 </div>
@@ -39,6 +40,9 @@
     </body>
 
     <script>
+        //document.getElementById('typeList').style.visibility = "hidden";
+        changeVisibility("typeList");
+
         function moodSelector(params) {
             let playlistsStr = "";
 
@@ -51,12 +55,25 @@
 
 
             document.getElementById("moodTitle").innerHTML = "You're " + params;
+            
 
             playlists.forEach(element =>{
-                playlistsStr += '<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/' + element + '?tracklist=false" width="270" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
+                playlistsStr += '<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/' + element + '?tracklist=false" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
             });
 
             document.getElementById("playlistContainer").innerHTML = playlistsStr;
+
+            changeVisibility("typeList", true);
+        }
+
+        function changeVisibility(id, persist) {
+            var x = document.getElementById(id);
+
+            if (x.style.visibility === 'hidden' || persist) {
+                x.style.visibility = 'visible';
+            } else {
+                x.style.visibility = 'hidden';
+            }
         }
     </script>
 </html>
