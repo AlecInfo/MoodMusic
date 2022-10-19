@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <!-- <meta name="format-detection" content="telephone=no"> -->
         <!-- <meta name="msapplication-tap-highlight" content="no"> -->
-        <!-- <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover"> -->
+        <!-- <meta name="viewport" content="initial-scale=1, width= device-width, viewport-fit=cover"> -->
         <!-- <meta name="color-scheme" content="light dark"> -->
         <link rel="stylesheet" href="css/index.css">
         <title>Hello World</title>
@@ -13,6 +13,10 @@
     <body>
         <header>
             <h1>MoodMusic</h1>
+            <!-- <div class="header purple">
+                <button class="left icon ion-navicon" name="button"></button>
+                <h1>Application title</h1>
+              </div> -->
         </header>
         <main>
             <div>
@@ -21,9 +25,9 @@
                     <button id="btnMoodSelector" onclick="moodSelector('HAPPY')">HAPPY</button>
                     <button id="btnMoodSelector" onclick="moodSelector('SAD')">SAD</button>
                     <button id="btnMoodSelector" onclick="moodSelector('LAZY')">LAZY</button>
-                    <button id="btnMoodSelector" onclick="moodSelector()">...</button>
-                    <button id="btnMoodSelector" onclick="moodSelector()">...</button>
-                    <button id="btnMoodSelector" onclick="moodSelector()">...</button>
+                    <button id="btnMoodSelector" onclick="moodSelector('...')">...</button>
+                    <button id="btnMoodSelector" onclick="moodSelector('...')">...</button>
+                    <button id="btnMoodSelector" onclick="moodSelector('...')">...</button>
                 </div>
             </div>
 
@@ -43,6 +47,20 @@
         //document.getElementById('typeList').style.visibility = "hidden";
         changeVisibility("typeList");
 
+        function vibrate(time) {
+            navigator.vibrate(time);
+        }
+
+        function changeVisibility(id, persist) {
+            var x = document.getElementById(id);
+
+            if (x.style.visibility === 'hidden' || persist) {
+                x.style.visibility = 'visible';
+            } else {
+                x.style.visibility = 'hidden';
+            }
+        }
+
         function moodSelector(params) {
             let playlistsStr = "";
 
@@ -55,7 +73,7 @@
 
 
             document.getElementById("moodTitle").innerHTML = "You're " + params;
-            
+            vibrate(15)
 
             playlists.forEach(element =>{
                 playlistsStr += '<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/' + element + '?tracklist=false" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
@@ -64,16 +82,6 @@
             document.getElementById("playlistContainer").innerHTML = playlistsStr;
 
             changeVisibility("typeList", true);
-        }
-
-        function changeVisibility(id, persist) {
-            var x = document.getElementById(id);
-
-            if (x.style.visibility === 'hidden' || persist) {
-                x.style.visibility = 'visible';
-            } else {
-                x.style.visibility = 'hidden';
-            }
         }
     </script>
 </html>
