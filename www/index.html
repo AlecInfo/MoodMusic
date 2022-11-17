@@ -1,87 +1,162 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <!-- <meta name="format-detection" content="telephone=no"> -->
-        <!-- <meta name="msapplication-tap-highlight" content="no"> -->
-        <!-- <meta name="viewport" content="initial-scale=1, width= device-width, viewport-fit=cover"> -->
-        <!-- <meta name="color-scheme" content="light dark"> -->
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <header>
-            <h1>MoodMusic</h1>
-            <!-- <div class="header purple">
-                <button class="left icon ion-navicon" name="button"></button>
-                <h1>Application title</h1>
-              </div> -->
-        </header>
-        <main>
-            <div>
-                <h2>Choose your mood</h2>
-                <div id="moodContainer">
-                    <button id="btnMoodSelector" onclick="moodSelector('HAPPY')">HAPPY</button>
-                    <button id="btnMoodSelector" onclick="moodSelector('SAD')">SAD</button>
-                    <button id="btnMoodSelector" onclick="moodSelector('LAZY')">LAZY</button>
-                    <button id="btnMoodSelector" onclick="moodSelector('...')">...</button>
-                    <button id="btnMoodSelector" onclick="moodSelector('...')">...</button>
-                    <button id="btnMoodSelector" onclick="moodSelector('...')">...</button>
-                </div>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta name="format-detection" content="telephone=no"> -->
+    <!-- <meta name="msapplication-tap-highlight" content="no"> -->
+    <!-- <meta name="viewport" content="initial-scale=1, width= device-width, viewport-fit=cover"> -->
+    <!-- <meta name="color-scheme" content="light dark"> -->
+    <link rel="stylesheet" href="css/index.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+    <header>
+        <!-- <h1>MoodMusic</h1> -->
+        <div class="topnav">
+            <a href="#home" class="active">MoodMusic</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="sousMenu">
+                <a href="#Unknown" onclick="listMoodClick()">List of mood</a>
+                <a href="#Unknown" onclick="pickMoodClick()">Pick your mood</a>
             </div>
-
-            <div id="separator"></div>
-            
-            <div>
-                <h2 id="moodTitle">You don't have an emotion !</h2>
-                <h3 id="typeList" onload='changeVisibility("typeList")'>Playlists</h3>
-                <div id="playlistContainer">
-
-                </div>
+            <!-- "Hamburger menu" / "Bar icon"-->
+            <div class="hamburgerMenu" onclick="menuClick(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </div>
-        </main>
-    </body>
+        </div>
+    </header>
+    <main>
+        <div id="moodSelection">
 
-    <script>
-        //document.getElementById('typeList').style.visibility = "hidden";
-        changeVisibility("typeList");
+        </div>
 
-        function vibrate(time) {
-            navigator.vibrate(time);
+        <div id="separator"></div>
+
+        <div>
+            <h2 id="moodTitle">You don't have an emotion !</h2>
+            <h3 id="typeList" onload='changeVisibility("typeList")'>Playlists</h3>
+            <div id="playlistContainer">
+
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    //document.getElementById('typeList').style.visibility = "hidden";
+    changeVisibility("typeList");
+    pickMoodClick();
+
+    // verrification si la camera est dispo
+    // document.addEventListener("deviceready", onDeviceReady, false);
+    // function onDeviceReady() {
+    //     pictureSource = navigator.camera.PictureSourceType;
+    //     destinationType = navigator.camera.DestinationType;
+    // }
+    document.getElementById("cameraTakePicture").addEventListener
+        ("click", cameraTakePicture);
+
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function menuClick() {
+        var x = document.getElementById("sousMenu");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    function listMoodClick() {
+        let html = "";
+
+        html += "<h2>Choose your mood</h2>";
+        html += "<div id=\"moodContainer\">";
+        html += "<button id=\"btnMoodSelector\" onclick=\"moodSelector('HAPPY')\">HAPPY</button>";
+        html += "<button id=\"btnMoodSelector\" onclick=\"moodSelector('SAD')\">SAD</button>";
+        html += "<button id=\"btnMoodSelector\" onclick=\"moodSelector('LAZY')\">LAZY</button>";
+        html += "<button id=\"btnMoodSelector\" onclick=\"moodSelector('...')\">...</button>";
+        html += "<button id=\"btnMoodSelector\" onclick=\"moodSelector('...')\">...</button>";
+        html += "<button id=\"btnMoodSelector\" onclick=\"moodSelector('...')\">...</button>";
+        html += "</div>";
+
+        document.getElementById("moodSelection").innerHTML = html;
+    }
+
+    function pickMoodClick() {
+        let html = "";
+
+        html += "<h2>Pick your mood</h2>";
+        html += "<button id=\takePicture\" class=\"button\" onclick=\"takePicture()\">Take pickture</button>";
+        html += "<img id = \"myImage\"></img>";
+
+        document.getElementById("moodSelection").innerHTML = html;
+    }
+
+    function vibrate(time) {
+        navigator.vibrate(time);
+    }
+
+    function takePicture() {
+        vibrate(15);
+
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL
+        });
+
+        function onSuccess(imageData) {
+            var image = document.getElementById('myImage');
+            image.src = "data:image/jpeg;base64," + imageData;
         }
 
-        function changeVisibility(id, persist) {
-            var x = document.getElementById(id);
-
-            if (x.style.visibility === 'hidden' || persist) {
-                x.style.visibility = 'visible';
-            } else {
-                x.style.visibility = 'hidden';
-            }
+        function onFail(message) {
+            alert('Failed because: ' + message);
         }
+    }
 
-        function moodSelector(params) {
-            let playlistsStr = "";
+    function displayImage(imgUri) {
 
-            let playlists = [
-                1479458365,
-                1276787711,
-                8788949122,
-                8873745702
-            ];
+        var elem = document.getElementById('imageFile');
+        elem.src = imgUri;
+    }
 
+    function changeVisibility(id, persist) {
+        var x = document.getElementById(id);
 
-            document.getElementById("moodTitle").innerHTML = "You're " + params;
-            vibrate(15)
-
-            playlists.forEach(element =>{
-                playlistsStr += '<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/' + element + '?tracklist=false" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
-            });
-
-            document.getElementById("playlistContainer").innerHTML = playlistsStr;
-
-            changeVisibility("typeList", true);
+        if (x.style.visibility === 'hidden' || persist) {
+            x.style.visibility = 'visible';
+        } else {
+            x.style.visibility = 'hidden';
         }
-    </script>
+    }
+
+    function moodSelector(params) {
+        let playlistsStr = "";
+
+        let playlists = [
+            1479458365,
+            1276787711,
+            8788949122,
+            8873745702
+        ];
+
+
+        document.getElementById("moodTitle").innerHTML = "You're " + params;
+        vibrate(15)
+
+        playlists.forEach(element => {
+            playlistsStr += '<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/' + element + '?tracklist=false" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
+        });
+
+        document.getElementById("playlistContainer").innerHTML = playlistsStr;
+
+        changeVisibility("typeList", true);
+    }
+</script>
+
 </html>
