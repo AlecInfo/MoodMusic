@@ -40,6 +40,8 @@
       let result = await url.text();
       //let txt=JSON.parse(result);
       document.getElementById("result").innerHTML = result;
+      result = JSON.parse(result);
+      console.log(result["analysis_result"][0]["emotion"])
     }
   </script>
 </html>
