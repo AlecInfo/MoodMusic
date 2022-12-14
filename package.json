@@ -1,5 +1,5 @@
 {
-  "name": "moodmusic.cfpt.name",
+  "name": "cfptmoodmusic.company.name",
   "displayName": "MoodMusic",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
@@ -21,8 +21,10 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-vibration": {},
-      "cordova-plugin-camera": {}
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
+      "cordova-plugin-vibration": {}
     },
     "platforms": [
       "android"
