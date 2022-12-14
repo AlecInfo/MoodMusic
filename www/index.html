@@ -14,15 +14,14 @@
 
 <body>
     <header>
-        <!-- <h1>MoodMusic</h1> -->
         <div class="topnav">
             <a href="#home" class="active">MoodMusic</a>
-            <!-- Navigation links (hidden by default) -->
+            <!-- Navigation -->
             <div id="sousMenu">
                 <a href="#listMood" onclick="listMoodClick()">List of mood</a>
                 <a href="#pickMood" onclick="pickMoodClick()">Pick your mood</a>
             </div>
-            <!-- "Hamburger menu" / "Bar icon"-->
+            <!-- Menu hamburger / icon-->
             <div class="hamburgerMenu" onclick="menuClick(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -32,9 +31,8 @@
     </header>
     <main>
         <div id="moodSelection">
-            
+            <!-- Affichage du mode en js -->
         </div>
-        <input type="image" src="" alt="test" id="testImage" value="file" >
         
         <div id="separator"></div>        
         
@@ -42,7 +40,7 @@
             <h2 id="moodTitle">You don't have an emotion !</h2>
             <h3 id="typeList" onload='changeVisibility("typeList")'>Playlists</h3>
             <div id="playlistContainer">
-
+                <!-- Affichage des playlists en js -->
             </div>
         </div>
     </main>

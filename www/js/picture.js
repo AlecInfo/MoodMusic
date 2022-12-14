@@ -1,6 +1,5 @@
+// Methode pour prendre une photo
 function getPhoto(){
-    alert("photo");
-
     var option = {
         quality: 100,
         destinationType: Camera.DestinationType.FILE_URI,
@@ -9,19 +8,20 @@ function getPhoto(){
         correctOrientation:true,
         encodingType: Camera.EncodingType.JPEG,
         cameraDirection: Camera.Direction.BACK,
-        targetWidth: 200,
-        targetHeight: 350
+        targetWidth: 400,
+        targetHeight: 400
     };
 
     navigator.camera.getPicture(onSuccess, onFail, option);
 }
-    
+   
+// Methode de retour quand la photo a été un succes
 function onSuccess(imageURI) {
-    alert("success");
-    document.getElementById("testImage").src = imageURI;
-    document.getElementById("testImage").files = imageURI;
+    document.getElementById("moodImage").src = imageURI;
+    //document.getElementById("testImage").files = imageURI;
 }
 
+// Methode de retour quand la photo n'a pas pu être faite
 function onFail(message) {
     alert('Failed because: ' + message);
 }
