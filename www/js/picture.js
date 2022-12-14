@@ -2,7 +2,7 @@
 function getPhoto(){
     var option = {
         quality: 100,
-        destinationType: Camera.DestinationType.FILE_URI,
+        destinationType: Camera.DestinationType.DATA_URL,
         sourceType: Camera.PictureSourceType.CAMERA,
         mediaType: Camera.MediaType.PICTURE,
         correctOrientation:true,
@@ -16,9 +16,10 @@ function getPhoto(){
 }
    
 // Methode de retour quand la photo a été un succes
-function onSuccess(imageURI) {
-    document.getElementById("moodImage").src = imageURI;
-    //document.getElementById("testImage").files = imageURI;
+function onSuccess(imageURL) {
+    var image = "data:image/jpeg;base64," + imageURL;
+    document.getElementById("moodImage").src = image;
+    getData(image);
 }
 
 // Methode de retour quand la photo n'a pas pu être faite

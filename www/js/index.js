@@ -1,7 +1,9 @@
-// Visibilité des éléments au départ
-changeVisibility("typeList");
-// Appliquer le mode de départ
-pickMoodClick();
+// Methode ou applique des valeurs au démarage
+function load(){
+    screen.orientation.lock('portrait')
+    changeVisibility("typeList");
+    pickMoodClick();
+}
 
 // Methode qui change la visibilité d'un objet
 function changeVisibility(id, persist) {
