@@ -8,10 +8,10 @@
 Faire la desc
 
 ## Fonctionnement
+Mettre les points de fonctionnalité
 
 
 <p align="right">(<a href="#readme-top">Retour au top</a>)</p>
-Mettre les points de fonctionnalité
 
 ---
 
