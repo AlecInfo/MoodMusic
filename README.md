@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# MoodMusic
+<h1 align="center">MoodMusic</h1>
 
 ![images](https://blog.instabug.com/wp-content/uploads/2018/09/apache-cordova-development-tools-1.png)
 
