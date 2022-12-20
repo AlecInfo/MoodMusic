@@ -5,12 +5,13 @@
 ![images](https://blog.instabug.com/wp-content/uploads/2018/09/apache-cordova-development-tools-1.png)
 
 ## Description
-Application mobile:iphone: en Cordova, qui sélectionne une playlist selon une humeur
+Faire la desc
 
 ## Fonctionnement
 
 
 <p align="right">(<a href="#readme-top">Retour au top</a>)</p>
+Mettre les points de fonctionnalité
 
 ---
 
