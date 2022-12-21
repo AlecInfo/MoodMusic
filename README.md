@@ -31,7 +31,7 @@ Pour apporter des modifications et les suggérer clonez le repo:
 git clone https://github.com/AlecInfo/MoodMusic.git 
 ```
 Et pour télécharger l'application pour l'utilisté sur votre smartphone:
-* [Télécharger l'apk](https://github.com/AlecInfo/MoodMusic/releases/download/v1.0.0/app-debug.apk)
+* [Télécharger l'apk](https://github.com/AlecInfo/MoodMusic/releases/download/v1.0.1/app-debug.apk)
 
 ## Utilisation
 <h3>Accueil</h3>
