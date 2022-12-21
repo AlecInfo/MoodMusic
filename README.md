@@ -5,7 +5,13 @@
 ![images](https://blog.instabug.com/wp-content/uploads/2018/09/apache-cordova-development-tools-1.png)
 
 ## Description
-Faire la desc
+MoodMusic est une application de musique qui a pour particularité de vous suggérer des playlists de Deezer en fonction de votre humeur. Vous pouvez choisir votre humeur manuellement ou alors utiliser une reconnaissance faciale en prenant une photo.
+
+## Technologies
+* HTML
+* CSS
+* JavaScript
+* Cordova
 
 ## Fonctionnement
 Mettre les points de fonctionnalité
