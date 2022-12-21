@@ -4,7 +4,9 @@
 
 <p align="center">
   <a href="#description">Description</a> •
-  <a href="#commencer">Commencer</a> •
+  <a href="#technologie">Technologie</a> •
+  <a href="#telechargement">Téléchargement</a> •
+  <a href="#utilisation">Utilisation</a> •
   <a href="#license">License</a>
 </p>
 
