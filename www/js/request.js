@@ -16,13 +16,15 @@ async function getData(image) {
     "https://face-detection-and-analysis.p.rapidapi.com/face_analysis",
     options
   );
+  // Récupération des données
   let result = await url.text();
   result = JSON.parse(result);
   let emotion = result["analysis_result"][0]["emotion"]; 
+  // Envoi des données pour faire la détéction
   moodSelector(emotion);
 }
 
-// Methode qui converti 
+// Methode qui converti le data_url fourni par la photo en jpeg
 function dataURLtoFile(dataurl, filename) {
   var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
       bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);

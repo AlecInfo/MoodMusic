@@ -16,6 +16,7 @@ function changeVisibility(id, persist) {
     }
 }
 
+// Methode qui retourne le parametre avec la premiere lettre en majuscule
 function UpCaseFirstLetter(text){
     const str = text.toLowerCase();
     const strConvert = str.charAt(0).toUpperCase() + str.slice(1);

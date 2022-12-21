@@ -2,10 +2,11 @@
 function listMoodClick() {
     let html = "";
 
-    html += "<h2>Choose your mood</h2>";
+    html += "<h2 class='title'>Liste des humeurs</h2>";
     html += "<div id=\"moodContainer\">";
+    // Liste des boutons 
     moodName.forEach(moodText => {
-        var text = UpCaseFirstLetter(moodText);
+        var text = UpCaseFirstLetter(moodNameFR[moodName.indexOf(moodText)]);
         html += `<button id='btnMoodSelector' onclick='moodSelector("${moodText}")'>${text}</button>`;
     });
     html += "</div>";
@@ -13,13 +14,13 @@ function listMoodClick() {
     document.getElementById("moodSelection").innerHTML = html;
 }
 
-// Affichage du mode ou prendre un photo pour savoir le mood
+// Affichage du mode ou prendre une photo pour savoir le mood
 function pickMoodClick() {
     let html = "";
 
-    html += "<h2>Pick your mood</h2>";
+    html += "<h2 class='title'>Prendre l'humeur</h2>";
+    html += "<button id=\"takePicture\" class=\"button\" onclick=\"TakePicture()\" style=\"\">Prendre la photo</button>";
     html += "<img id=\"moodImage\"></img>";
-    html += "<button id=\"takePicture\" class=\"button\" onclick=\"TakePicture()\" style=\"\">Take picture</button>";
 
     document.getElementById("moodSelection").innerHTML = html;
 }
@@ -33,12 +34,14 @@ function TakePicture() {
 // Affichage de la liste des playlists
 function moodSelector(moodParams) {
     let playlistsCards = "";
+    // Taille des playlists varriable selon le telephone
     var width = 90 * screen.width / 100;
 
-    document.getElementById("moodTitle").innerHTML = "You're " + UpCaseFirstLetter(moodParams);
+    document.getElementById("moodTitle").innerHTML = "Vous êtes " + UpCaseFirstLetter(moodNameFR[moodName.indexOf(moodParams.toUpperCase())]);
     navigator.vibrate(15);
 
     var index = 0;
+    // Affichage de toute les playlist selon l'humeur
     moodName.forEach(mood => {
         if (mood.toUpperCase() == moodParams.toUpperCase()) {
             moodPlaylists[index].forEach(playlist => {

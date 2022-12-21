@@ -80,13 +80,13 @@ main {
 
 .button {
     flex: 0 0 auto;
+    padding: 0.5rem;
 
     margin: 0.2rem;
 
     border-radius: 10px;
     border: #37463d solid 1.5px;
-
-    font-size: x-large;
+    font-size: medium;
     font-weight: bold;
     color: white;
 
@@ -95,6 +95,10 @@ main {
 
 .longText {
     text-align: justify;
+}
+
+.title{
+    text-align: center;
 }
 
 #moodContainer {
@@ -142,11 +146,14 @@ main {
 }
 
 #moodImage {
-    float: right;
     height: 9rem;
     width: auto;
 }
 
 #moodSelection{
     height: 13rem;
+}
+
+#takePicture{
+    float: right;
 }

@@ -35,5 +35,6 @@ let anger= [
 
 ];
 
+var moodNameFR = ["neutre", "heureux", "triste", "supris", "en colère"];
 var moodName = ["NEUTRAL", "HAPPY", "SAD", "SURPRISE", "ANGER"];
 var moodPlaylists = [neutral, happy, sad, surprise, anger];
