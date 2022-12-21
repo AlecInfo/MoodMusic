@@ -15,6 +15,8 @@ MoodMusic est une application de musique qui a pour particularité de vous sugg�
 
 ## Téléchargement
 Pour aporter des modifications il vous suffit et clone le repo:
+
+Et pour apporter des modifications et les sugerer:
 ```shell 
 git clone https://github.com/AlecInfo/MoodMusic.git 
 ```
