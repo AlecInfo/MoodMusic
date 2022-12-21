@@ -14,7 +14,9 @@ MoodMusic est une application de musique qui a pour particularité de vous sugg�
 * Cordova
 
 ## Téléchargement
-Pour aporter des modifications il vous suffit de faire un fork:
+Pour aporter des modifications il vous suffit de faire:
+* [Fork](https://github.com/login?return_to=%2FAlecInfo%2FMoodMusic)
+* [Télécharger le zip](https://github.com/AlecInfo/MoodMusic/archive/refs/heads/main.zip)
 
 et pour apporter des modifications et les suggérer clonez le repo:
 ```shell 
