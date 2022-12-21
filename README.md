@@ -13,6 +13,7 @@ MoodMusic est une application de musique qui a pour particularité de vous sugg�
 * JavaScript
 * Cordova
 
+## Utilisation
 <h3>Accueil</h3>
 <p>
     Vous pouvez aller sur le menu latéral, puis vous avez deux choix : soit "Liste des humeurs" pour choisir directement votre humeur sans prendre de photo, 
