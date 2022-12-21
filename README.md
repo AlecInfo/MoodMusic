@@ -4,8 +4,8 @@
 
 <p align="center">
   <a href="#description">Description</a> •
-  <a href="#technologie">Technologie</a> •
-  <a href="#telechargement">Téléchargement</a> •
+  <a href="#technologies">Technologies</a> •
+  <a href="#téléchargement">Téléchargement</a> •
   <a href="#utilisation">Utilisation</a> •
   <a href="#license">License</a>
 </p>
