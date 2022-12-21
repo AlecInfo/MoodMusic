@@ -49,6 +49,9 @@ Et pour télécharger l'application pour l'utilisté sur votre smartphone:
     puis une suggestion de plusieurs playlists de musique de Deezer en fonction de l'humeur de la photo vous sera proposée.
 </p>
 
+## License
+
+[MIT](https://github.com/AlecInfo/MoodMusic/blob/main/LICENSE)
 
 <p align="right">(<a href="#readme-top">Retour au top</a>)</p>
 
