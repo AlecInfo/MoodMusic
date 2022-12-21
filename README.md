@@ -18,10 +18,12 @@ Pour aporter des modifications il vous suffit de faire:
 * [Fork](https://github.com/AlecInfo/MoodMusic/fork)
 * [Télécharger le zip](https://github.com/AlecInfo/MoodMusic/archive/refs/heads/main.zip)
 
-et pour apporter des modifications et les suggérer clonez le repo:
+Pour apporter des modifications et les suggérer clonez le repo:
 ```shell 
 git clone https://github.com/AlecInfo/MoodMusic.git 
 ```
+Et pour télécharger l'application pour l'utilisté sur votre smartphone:
+[Apk](https://github.com/AlecInfo/MoodMusic/releases/download/v1.0.0/app-debug.apk);
 
 ## Utilisation
 <h3>Accueil</h3>
