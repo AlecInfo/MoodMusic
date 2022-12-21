@@ -2,6 +2,12 @@
 
 <h1 align="center">MoodMusic</h1>
 
+<p align="center">
+  <a href="#description">Description</a> •
+  <a href="#commencer">Commencer</a> •
+  <a href="#license">License</a>
+</p>
+
 ![images](https://blog.instabug.com/wp-content/uploads/2018/09/apache-cordova-development-tools-1.png)
 
 ## Description
