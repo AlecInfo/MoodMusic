@@ -5,12 +5,14 @@ body {
     padding: 0;
     background-color: white;
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 main {
+    width: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -89,6 +91,10 @@ main {
     color: white;
 
     background-color: #535953;
+}
+
+.longText {
+    text-align: justify;
 }
 
 #moodContainer {

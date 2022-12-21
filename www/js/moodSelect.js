@@ -33,6 +33,7 @@ function TakePicture() {
 // Affichage de la liste des playlists
 function moodSelector(moodParams) {
     let playlistsCards = "";
+    var width = 90 * screen.width / 100;
 
     document.getElementById("moodTitle").innerHTML = "You're " + UpCaseFirstLetter(moodParams);
     navigator.vibrate(15);
@@ -41,7 +42,7 @@ function moodSelector(moodParams) {
     moodName.forEach(mood => {
         if (mood.toUpperCase() == moodParams.toUpperCase()) {
             moodPlaylists[index].forEach(playlist => {
-                playlistsCards += '<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/' + playlist + '?tracklist=false" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
+                playlistsCards += `<iframe id="playlist" title="deezer-widget" src="https://widget.deezer.com/widget/auto/playlist/${playlist}?tracklist=false" width="${width}" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`;
             });
         }
         index += 1;
