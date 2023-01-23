@@ -10,7 +10,7 @@
   <a href="#license">License</a>
 </p>
 
-![images](https://blog.instabug.com/wp-content/uploads/2018/09/apache-cordova-development-tools-1.png)
+![images](https://assets-global.website-files.com/6270e8022b05abb840d27d6f/63204ecd93e4917600e4008d_apache-cordova-development-tools-1.png)
 
 ## Description
 MoodMusic est une application de musique qui a pour particularité de vous suggérer des playlists de Deezer en fonction de votre humeur. Vous pouvez choisir votre humeur manuellement ou alors utiliser une reconnaissance faciale en prenant une photo.
